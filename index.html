@@ -3,7 +3,7 @@
 <head>
     <!-- ✅ Enhanced SEO Meta Tags -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width=1.0, maximum-scale=5.0">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
     
@@ -17,44 +17,16 @@
     <meta property="og:description" content="Automate complex AI workflows 10x faster with intelligent validation sheets & guardrail systems.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://klawskill.com/">
-    <meta property="og:image" content="https://klawskill.com/assets/jit-framework-og.png">
     <meta property="og:site_name" content="JIT Framework">
     
     <!-- ✅ Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="JIT Framework | Just-In-Time Task Orchestration">
     <meta name="twitter:description" content="Automate complex AI workflows 10x faster with intelligent validation sheets.">
-    <meta name="twitter:image" content="https://klawskill.com/assets/jit-framework-twitter.png">
     
     <!-- ✅ Canonical URL -->
     <link rel="canonical" href="https://klawskill.com/">
     
-    <!-- ✅ JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "JIT Framework",
-        "description": "Just-In-Time Task Orchestration Framework for AI Agents",
-        "url": "https://klawskill.com/",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Any",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        },
-        "author": {
-            "@type": "Organization",
-            "name": "JIT Framework Team"
-        },
-        "datePublished": "2026-07-10",
-        "softwareVersion": "2.1",
-        "keywords": "AI automation, task orchestration, validation sheets, guardrail systems"
-    }
-    </script>
-    
-    <!-- ✅ Enhanced Responsive CSS with Brand Colors -->
     <style>
         /* 🌈 JIT Framework Brand Colors */
         :root {
@@ -62,44 +34,17 @@
             --jit-primary-dark: #764ba2;
             --jit-secondary: #4299e1;
             --jit-success: #48bb78;
-            --jit-warning: #ed8936;
-            --jit-danger: #f56565;
             --jit-light: #f7fafc;
             --jit-dark: #2d3748;
             --jit-white: #ffffff;
         }
         
-        /* 📱 Mobile-First Responsive Design */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--jit-dark);
             background: var(--jit-white);
-        }
-        
-        /* 🔋 Hero Section with Gradient */
-        .jit-hero {
-            background: linear-gradient(135deg, var(--jit-primary) 0%, var(--jit-primary-dark) 100%);
-            color: var(--jit-white);
-            padding: 3rem 1rem;
-            text-align: center;
-        }
-        
-        @media (min-width: 768px) {
-            .jit-hero {
-                padding: 4rem 2rem;
-            }
-        }
-        
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
         }
         
         /* 🎯 Navigation */
@@ -108,7 +53,6 @@
             padding: 1rem 2rem;
             text-align: center;
         }
-        
         .jit-nav ul {
             list-style: none;
             display: flex;
@@ -116,56 +60,102 @@
             justify-content: center;
             flex-wrap: wrap;
         }
-        
         .jit-nav a {
             color: var(--jit-white);
             text-decoration: none;
             font-weight: 500;
             font-size: 1.1rem;
         }
-        
         .jit-nav a:hover { opacity: 0.9; }
         
-        /* 📊 Features Grid */
-        .features-grid {
+        /* 🌟 Hero Section */
+        .jit-hero {
+            background: linear-gradient(135deg, var(--jit-primary) 0%, var(--jit-primary-dark) 100%);
+            color: var(--jit-white);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        .jit-hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .jit-hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+        
+        /* 🔗 Page Links (Home, Features, Docs) - Top of page */
+        .page-links {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        .page-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
         }
-        
-        @media (min-width: 640px) {
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        .jit-feature {
+        .page-card {
             background: var(--jit-light);
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid var(--jit-primary);
+            transition: transform 0.3s;
+        }
+        .page-card:hover { transform: translateY(-5px); }
+        .page-card h2 { color: var(--jit-primary); margin-bottom: 1rem; }
+        .page-card p { color: var(--jit-dark); margin-bottom: 1.5rem; }
+        
+        .jit-button {
+            display: inline-block;
+            background: var(--jit-primary);
+            color: var(--jit-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .jit-button:hover { background: var(--jit-primary-dark); }
+        
+        /* ✨ Benefits */
+        .jit-benefits {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: var(--jit-light);
+            border-radius: 12px;
+        }
+        .jit-benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        .jit-benefits li {
             margin: 1rem 0;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding-left: 2.5rem;
+            position: relative;
+        }
+        .jit-benefits li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            font-size: 1.25rem;
+        }
+        .jit-benefits strong { color: var(--jit-primary); }
+        
+        /* 🔧 Use Cases */
+        .jit-use-cases {
+            background: linear-gradient(135deg, #e6fffa 0%, #ebf8ff 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+        .jit-use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .jit-use-case {
+            padding: 1rem;
+            background: rgba(255,255,255,0.8);
+            border-radius: 8px;
+            text-align: center;
         }
         
-        .jit-feature:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .jit-feature h3 {
-            color: var(--jit-primary);
-            margin-bottom: 0.75rem;
-        }
-        
-        /* 🎯 CTA Section */
+        /* 🚀 CTA Section */
         .jit-cta {
             background: var(--jit-secondary);
             color: var(--jit-white);
@@ -176,99 +166,23 @@
             max-width: 800px;
         }
         
-        /* 🛠️ Interactive Elements */
-        button, .jit-button {
-            background: var(--jit-white);
-            color: var(--jit-primary);
-            padding: 0.875rem 1.75rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-            min-height: 48px;
-            min-width: 44px;
-        }
-        
-        button:hover, .jit-button:hover {
-            background: var(--jit-primary-dark);
+        /* Footer */
+        .jit-footer {
+            background: var(--jit-dark);
             color: var(--jit-white);
-            transform: scale(1.05);
-        }
-        
-        /* 📱 Mobile Improvements */
-        @media (max-width: 640px) {
-            .jit-hero h1 { font-size: 2.25rem; }
-            .jit-hero h2 { font-size: 1.5rem; }
-            .jit-nav ul { gap: 1rem; }
-            button, .jit-button { width: 100%; margin: 0.5rem 0; }
-        }
-        
-        /* ♿ Accessibility */
-        :focus {
-            outline: 3px solid var(--jit-primary);
-            outline-offset: 2px;
-        }
-        
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        /* Benefits Checklist */
-        .jit-benefits {
-            margin: 3rem 0;
             padding: 2rem;
-            background: var(--jit-light);
-            border-radius: 12px;
+            text-align: center;
+            margin-top: 3rem;
         }
         
-        .jit-benefits ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .jit-benefits li {
-            margin: 1rem 0;
-            padding-left: 2.5rem;
-            position: relative;
-        }
-        
-        .jit-benefits li::before {
-            content: "✅";
-            position: absolute;
-            left: 0;
-            font-size: 1.25rem;
-        }
-        
-        .jit-benefits strong {
-            color: var(--jit-primary);
+        @media (max-width: 640px) {
+            .jit-hero h1 { font-size: 1.8rem; }
+            .jit-nav ul { gap: 1rem; }
         }
     </style>
 </head>
 <body>
-    <!-- ✅ Skip to Main Content for Accessibility -->
-    <a href="#main-content" class="visually-hidden">Skip to main content</a>
-    
-    <!-- 🌟 Hero Section -->
-    <header class="jit-hero" role="banner">
-        <div class="hero-container">
-            <h1>⚡ JIT Framework</h1>
-            <h2>Just-In-Time Task Orchestration for AI Agents</h2>
-            <p>Revolutionary framework for automating complex AI workflows with intelligent validation sheets and guardrail systems.</p>
-            <button class="jit-button" onclick="scrollToFeatures()">🚀 Get Started with JIT</button>
-        </div>
-    </header>
-    
-    <!-- 🎯 Navigation -->
+    <!-- Navigation -->
     <nav class="jit-nav">
         <ul>
             <li><a href="/">🏠 Home</a></li>
@@ -278,112 +192,80 @@
         </ul>
     </nav>
     
-    <!-- 📋 Main Content -->
-    <main id="main-content" style="max-width: 1200px; margin: 2rem auto; padding: 0 1rem;">
-        
-        <!-- 🔍 Core Features -->
-        <section style="margin: 3rem 0;">
-            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--jit-primary);">Core Capabilities</h2>
-            
-            <div class="features-grid">
-                <div class="jit-feature">
-                    <h3>📋 Intelligent Validation Sheets</h3>
-                    <p>Automatically generate validation sheets for every task with pre-execution verification tables, file identification, and preservation strategies.</p>
-                </div>
-                
-                <div class="jit-feature">
-                    <h3>🔍 Guardrail Systems</h3>
-                    <p>Built-in guardrails prevent errors with must-have requirements, nice-to-have improvements, and banned anti-patterns enforcement.</p>
-                </div>
-                
-                <div class="jit-feature">
-                    <h3>⚡ Episodic Reasoning</h3>
-                    <p>Learn from every execution with built-in episodic reasoning logs and pattern capture for continuous improvement.</p>
-                </div>
-                
-                <div class="jit-feature">
-                    <h3>🎯 Quality Assurance</h3>
-                    <p>Automated validation with success criteria tracking, mobile responsiveness testing, and cross-browser compatibility.</p>
-                </div>
-                
-                <div class="jit-feature">
-                    <h3>🔧 SEO Optimization</h3>
-                    <p>Built-in SEO features including robots.txt, sitemap.xml, structured data, and meta tag optimization.</p>
-                </div>
-                
-                <div class="jit-feature">
-                    <h3>📱 Responsive Design</h3>
-                    <p>Mobile-first approach with touch-friendly interfaces and adaptive layouts for all screen sizes.</p>
-                </div>
+    <!-- Hero Section -->
+    <header class="jit-hero">
+        <h1>⚡ JIT Framework</h1>
+        <p>Just-In-Time Task Orchestration for AI Agents</p>
+        <p style="margin-top: 1rem;">Automate complex workflows 10x faster with intelligent validation sheets & guardrail systems.</p>
+    </header>
+    
+    <!-- 🏃 Quick Path Section (Home, Features, Docs) - FIRST THING AFTER HERO -->
+    <div class="page-links">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--jit-primary);">Quick Navigation</h2>
+        <div class="page-grid">
+            <div class="page-card">
+                <h2>🏠 Home</h2>
+                <p>Start here for the overview of JIT Framework capabilities and features.</p>
+                <a href="/" class="jit-button">Visit Home</a>
             </div>
-        </section>
-        
-        <!-- ✨ Benefits -->
-        <section class="jit-benefits">
-            <h2 style="color: var(--jit-primary); margin-bottom: 1.5rem;">Why Choose JIT Framework?</h2>
-            <ul>
-                <li><strong>10x Faster Task Execution</strong> – Automate complex workflows in minutes instead of hours</li>
-                <li><strong>Zero Error Rate</strong> – Guardrail systems prevent mistakes before they happen</li>
-                <li><strong>Continuous Learning</strong> – Episodic reasoning improves with every task execution</li>
-                <li><strong>Enterprise Ready</strong> – Scalable architecture for any workload size</li>
-                <li><strong>SEO Optimized</strong> – Built-in SEO features for maximum visibility</li>
-                <li><strong>Mobile Responsive</strong> – Perfect experience on all devices</li>
-            </ul>
-        </section>
-        
-        <!-- 🔧 Use Cases -->
-        <section style="background: linear-gradient(135deg, #e6fffa 0%, #ebf8ff 100%); padding: 2rem; border-radius: 12px; margin: 3rem 0;">
-            <h2 style="color: var(--jit-primary); margin-bottom: 1.5rem; text-align: center;">🔧 Perfect For:</h2>
-            <div class="features-grid">
-                <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 8px;">✅ Audit & Monitoring Systems</div>
-                <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 8px;">✅ Task Creation & Management</div>
-                <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 8px;">✅ Quality Assessment</div>
-                <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 8px;">✅ GitHub Operations</div>
-                <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 8px;">✅ Build & Development Workflows</div>
-                <div style="padding: 1rem; background: rgba(255,255,255,0.8); border-radius: 8px;">✅ SEO & Marketing Automation</div>
+            <div class="page-card">
+                <h2>⚡ Features</h2>
+                <p>Explore the powerful capabilities of JIT Framework including validation sheets, guardrail systems, and episodic reasoning.</p>
+                <a href="/html/features.html" class="jit-button">Explore Features</a>
             </div>
-        </section>
-        
-    </main>
+            <div class="page-card">
+                <h2>📚 Documentation</h2>
+                <p>Complete API reference, usage examples, and step-by-step guides to get you up and running quickly.</p>
+                <a href="/html/docs.html" class="jit-button">Read Docs</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ✨ Benefits -->
+    <section class="jit-benefits">
+        <h2 style="color: var(--jit-primary); margin-bottom: 1.5rem; text-align: center;">Why Choose JIT Framework?</h2>
+        <ul>
+            <li><strong>10x Faster Task Execution</strong> – Automate complex workflows in minutes instead of hours</li>
+            <li><strong>Zero Error Rate</strong> – Guardrail systems prevent mistakes before they happen</li>
+            <li><strong>Continuous Learning</strong> – Episodic reasoning improves with every task execution</li>
+            <li><strong>Enterprise Ready</strong> – Scalable architecture for any workload size</li>
+            <li><strong>SEO Optimized</strong> – Built-in SEO features for maximum visibility</li>
+            <li><strong>Mobile Responsive</strong> – Perfect experience on all devices</li>
+        </ul>
+    </section>
+    
+    <!-- 🔧 Use Cases -->
+    <section class="jit-use-cases">
+        <h2 style="color: var(--jit-primary); margin-bottom: 1.5rem; text-align: center;">Perfect For:</h2>
+        <div class="jit-use-cases-grid">
+            <div class="jit-use-case">✅ Audit & Monitoring Systems</div>
+            <div class="jit-use-case">✅ Task Creation & Management</div>
+            <div class="jit-use-case">✅ Quality Assessment</div>
+            <div class="jit-use-case">✅ GitHub Operations</div>
+            <div class="jit-use-case">✅ Build & Development Workflows</div>
+            <div class="jit-use-case">✅ SEO & Marketing Automation</div>
+        </div>
+    </section>
     
     <!-- 🚀 CTA Section -->
-    <footer class="jit-cta" role="contentinfo">
+    <footer class="jit-cta">
         <div style="max-width: 800px; margin: 0 auto;">
             <h2 style="margin-bottom: 1rem;">Ready to Automate Your AI Workflows?</h2>
             <p style="margin-bottom: 2rem;">Join hundreds of developers using JIT Framework to supercharge their AI agent productivity.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
-                <button onclick="window.location.href='/html/docs.html'">📖 Documentation</button>
-                <button onclick="window.location.href='https://github.com/lenondeuce/klawskill.com'">⭐ Star on GitHub</button>
-                <button onclick="window.location.href='/html/contact.html'">🚀 Get Started</button>
+                <button onclick="window.location.href='/html/docs.html'" style="background: var(--jit-white); color: var(--jit-primary); padding: 0.875rem 1.75rem; border: none; border-radius: 8px; font-weight: 600;">📖 Documentation</button>
+                <button onclick="window.location.href='https://github.com/lenondeuce/klawskill.com'" style="background: var(--jit-white); color: var(--jit-primary); padding: 0.875rem 1.75rem; border: none; border-radius: 8px; font-weight: 600;">⭐ Star on GitHub</button>
+                <button onclick="window.location.href='/html/contact.html'" style="background: var(--jit-white); color: var(--jit-primary); padding: 0.875rem 1.75rem; border: none; border-radius: 8px; font-weight: 600;">🚀 Get Started</button>
             </div>
         </div>
     </footer>
     
-    <!-- 💬 Social & Footer -->
-    <section style="background: var(--jit-dark); color: var(--jit-white); padding: 2rem 1rem;">
-        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h3 style="margin-bottom: 1rem;">Made with ⚡ by Deuce Lenon</h3>
-            <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem;">
-                <a href="https://instagram.com" style="color: var(--jit-white); text-decoration: none; font-weight: 600;">📸 Instagram</a>
-                <a href="https://twitter.com" style="color: var(--jit-white); text-decoration: none; font-weight: 600;">🐦 Twitter</a>
-            </div>
-            <p style="opacity: 0.7; font-size: 0.9rem;">© 2026 JIT Framework. All rights reserved.</p>
-        </div>
-    </section>
-    
-    <!-- ✅ JavaScript for Interactivity -->
-    <script>
-        function scrollToFeatures() {
-            document.querySelector('#main-content').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-        
-        // Performance monitoring
-        window.addEventListener('load', function() {
-            console.log('JIT Framework home page loaded successfully');
-        });
-    </script>
+    <!-- Footer -->
+    <footer class="jit-footer">
+        <p>© 2026 JIT Framework. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+            Made with ⚡ by <a href="https://instagram.com/deucelenon" style="color: var(--jit-white); text-decoration: underline;">Deuce Lenon</a>
+        </p>
+    </footer>
 </body>
 </html>
