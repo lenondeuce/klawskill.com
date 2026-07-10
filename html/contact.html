@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ✅ Enhanced SEO Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JIT Framework | Get Started</title>
-    <meta name="description" content="Get JIT Framework on GitHub - Star, Fork, Contribute">
+    <title>Contact Deuce Lenon | JIT Framework</title>
+    <meta name="description" content="Contact Deuce Lenon - Creator of JIT Framework. Instagram, Twitter, and GitHub">
+    <meta name="keywords" content="contact Deuce Lenon, JIT Framework contact, Instagram, Twitter, GitHub">
+    <meta name="author" content="Deuce Lenon">
+    
+    <!-- ✅ Open Graph Tags -->
+    <meta property="og:title" content="Contact Deuce Lenon | JIT Framework">
+    <meta property="og:description" content="Connect with the creator of JIT Framework">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://klawskill.com/html/contact.html">
+    <meta property="og:site_name" content="JIT Framework">
+    
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact Deuce Lenon">
+    <meta name="twitter:description" content="Connect with the creator of JIT Framework">
+    
+    <!-- ✅ Canonical URL -->
+    <link rel="canonical" href="https://klawskill.com/html/contact.html">
     
     <style>
         /* 🌈 JIT Framework Brand Colors */
@@ -14,6 +32,8 @@
             --jit-secondary: #4299e1;
             --jit-success: #48bb78;
             --jit-github: #24292e;
+            --jit-instagram: #e1306c;
+            --jit-twitter: #1da1f2;
             --jit-light: #f7fafc;
             --jit-dark: #2d3748;
             --jit-white: #ffffff;
@@ -54,8 +74,8 @@
         
         /* 📝 Main Content */
         .jit-content {
-            max-width: 900px;
-            margin: 2rem auto;
+            max-width: 800px;
+            margin: 3rem auto;
             padding: 0 1rem;
         }
         
@@ -75,87 +95,88 @@
             border-bottom: 2px solid var(--jit-primary);
         }
         
-        /* GitHub Card */
-        .jit-github-card {
-            background: var(--jit-github);
+        /* Profile Section */
+        .jit-profile {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--jit-primary) 0%, var(--jit-primary-dark) 100%);
             color: var(--jit-white);
             border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
             margin: 2rem 0;
         }
         
-        .jit-github-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+        .jit-profile h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
         }
         
-        .jit-github-logo {
-            font-size: 3rem;
+        .jit-profile p {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
         
-        .jit-github-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .jit-github-stats {
-            display: flex;
-            gap: 3rem;
-            justify-content: center;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .jit-stat {
-            text-align: center;
-        }
-        
-        .jit-stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--jit-primary);
-        }
-        
-        .jit-stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
-        /* 🔄 Action Buttons */
-        .jit-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+        /* Social Cards */
+        .jit-social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
             margin-top: 2rem;
         }
         
-        .jit-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.3s;
+        .jit-social-card {
+            background: var(--jit-light);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid var(--jit-primary);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
-        .jit-btn:hover { transform: translateY(-2px); }
+        .jit-social-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .jit-social-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .jit-social-card h3 {
+            color: var(--jit-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .jit-social-card .jit-username {
+            color: var(--jit-dark);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .jit-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
         
         .jit-btn-primary {
             background: var(--jit-primary);
             color: var(--jit-white);
         }
         
-        .jit-btn-secondary {
-            background: var(--jit-white);
-            color: var(--jit-github);
-            border: 2px solid var(--jit-github);
+        .jit-btn-instagram {
+            background: var(--jit-instagram);
+            color: var(--jit-white);
+        }
+        
+        .jit-btn-twitter {
+            background: var(--jit-twitter);
+            color: var(--jit-white);
         }
         
         .jit-btn-github {
@@ -163,49 +184,37 @@
             color: var(--jit-white);
         }
         
-        /* ✨ Benefits */
-        .jit-benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
+        .jit-btn:hover { transform: scale(1.05); }
+        
+        /* Contact Form Section */
+        .jit-form-group {
+            margin-bottom: 1.5rem;
         }
         
-        .jit-benefit {
-            background: var(--jit-light);
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            border: 2px solid var(--jit-primary);
+        .jit-form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--jit-dark);
         }
         
-        .jit-benefit h3 {
-            color: var(--jit-primary-dark);
-            margin-bottom: 0.75rem;
+        .jit-form-group input,
+        .jit-form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
         }
         
-        /* 📺 Video Section */
-        .jit-video-container {
-            background: var(--jit-github);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-            margin: 2rem 0;
-        }
+        .jit-form-group textarea { min-height: 150px; resize: vertical; }
         
-        .jit-video-placeholder {
-            background: linear-gradient(135deg, #1a1e22 0%, #24292e 100%);
-            border-radius: 12px;
-            padding: 4rem 2rem;
-            margin: 1.5rem 0;
-        }
-        
-        /* 📱 Mobile Responsive */
-        @media (max-width: 640px) {
-            .jit-nav ul { gap: 1rem; }
-            .jit-github-stats { gap: 2rem; }
-            .jit-actions { flex-direction: column; }
-            .jit-btn { width: 100%; justify-content: center; }
+        .jit-form-group input:focus,
+        .jit-form-group textarea:focus {
+            outline: none;
+            border-color: var(--jit-primary);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
         
         /* Back Link */
@@ -214,156 +223,120 @@
             margin: 2rem;
             color: var(--jit-primary);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         .jit-back-link:hover { text-decoration: underline; }
+        
+        @media (max-width: 640px) {
+            .jit-profile h1 { font-size: 2rem; }
+            .jit-nav ul { gap: 1rem; }
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- 🎯 Navigation -->
     <nav class="jit-nav">
         <ul>
             <li><a href="/html/home.html">🏠 Home</a></li>
             <li><a href="/html/features.html">⚡ Features</a></li>
             <li><a href="/html/docs.html">📚 Documentation</a></li>
-            <li><a href="/html/contact.html">📦 GitHub</a></li>
+            <li><a href="/html/contact.html">📧 Contact</a></li>
         </ul>
     </nav>
     
     <!-- Back Link -->
-    <a href="/html/home.html" class="jit-back-link">→ Back to Home</a>
+    <a href="/html/home.html" class="jit-back-link">← Back to Home</a>
     
-    <!-- Main Content -->
+    <!-- 📝 Main Content -->
     <main class="jit-content">
+        <!-- Profile Section -->
         <div class="jit-section">
-            <h2>📦 Get JIT Framework</h2>
-            <p>Start building better AI workflows today. JIT Framework is open source and available on GitHub.</p>
-        </div>
-        
-        <!-- GitHub Card -->
-        <div class="jit-github-card">
-            <div class="jit-github-header">
-                <div class="jit-github-logo">⚡</div>
-                <div class="jit-github-title">jit-framework/jit-framework</div>
-            </div>
-            <p>Just-In-Time Task Orchestration Framework for AI Agents</p>
-            
-            <div class="jit-github-stats">
-                <div class="jit-stat">
-                    <div class="jit-stat-number">⭐ 2.4k</div>
-                    <div class="jit-stat-label">Stars</div>
-                </div>
-                <div class="jit-stat">
-                    <div class="jit-stat-number"> 🍴 320</div>
-                    <div class="jit-stat-label">Forks</div>
-                </div>
-                <div class="jit-stat">
-                    <div class="jit-stat-number">🔌 158</div>
-                    <div class="jit-stat-label">Open Issues</div>
-                </div>
-                <div class="jit-stat">
-                    <div class="jit-stat-number">✅ 98%</div>
-                    <div class="jit-stat-label">Closed Issues</div>
-                </div>
-            </div>
-            
-            <div class="jit-actions">
-                <a href="https://github.com/jit-framework/jit-framework" class="jit-btn jit-btn-github">
-                    <span>⭐ Star on GitHub</span>
-                </a>
-                <a href="https://github.com/jit-framework/jit-framework/fork" class="jit-btn jit-btn-secondary">
-                    <span>🍴 Fork Repository</span>
-                </a>
-                <a href="https://github.com/jit-framework/jit-framework/issues" class="jit-btn jit-btn-primary">
-                    <span>🐛 Report Issue</span>
-                </a>
+            <h2>👥 About Me</h2>
+            <div class="jit-profile">
+                <h1>Deuce Lenon</h1>
+                <p>Creator of JIT Framework | AI Workflow Automation Enthusiast</p>
             </div>
         </div>
         
-        <!-- Benefits Section -->
+        <!-- Social Media Section -->
         <div class="jit-section">
-            <h2>✨ Why Contribute?</h2>
-            <p>Join our growing community of AI developers and help shape the future of agent orchestration.</p>
-            
-            <div class="jit-benefits-grid">
-                <div class="jit-benefit">
-                    <h3>🎯 Learn & Grow</h3>
-                    <p>Work with cutting-edge AI technology and improve your development skills</p>
+            <h2>📱 Connect With Me</h2>
+            <div class="jit-social-grid">
+                <div class="jit-social-card">
+                    <span class="jit-social-icon">📸</span>
+                    <h3>Instagram</h3>
+                    <p class="jit-username">@deucelenon</p>
+                    <a href="https://instagram.com/deucelenon" target="_blank" class="jit-btn jit-btn-instagram">View Profile</a>
                 </div>
-                <div class="jit-benefit">
-                    <h3>🤝 Community</h3>
-                    <p>Join a supportive community of AI developers and researchers</p>
+                
+                <div class="jit-social-card">
+                    <span class="jit-social-icon">🐦</span>
+                    <h3>Twitter</h3>
+                    <p class="jit-username">@deucelenon</p>
+                    <a href="https://twitter.com/deucelenon" target="_blank" class="jit-btn jit-btn-twitter">Follow Me</a>
                 </div>
-                <div class="jit-benefit">
-                    <h3>🚀 Impact</h3>
-                    <p>Help build tools that thousands of developers rely on daily</p>
-                </div>
-                <div class="jit-benefit">
-                    <h3>📚 Open Source</h3>
-                    <p>Complete transparency and collaborative development</p>
-                </div>
-                <div class="jit-benefit">
-                    <h3>📝 Documentation</h3>
-                    <p>Help improvedocs for everyone</p>
-                </div>
-                <div class="jit-benefit">
-                    <h3>✅ Quality</h3>
-                    <p>High standards and comprehensive testing</p>
+                
+                <div class="jit-social-card">
+                    <span class="jit-social-icon">📦</span>
+                    <h3>GitHub</h3>
+                    <p class="jit-username">lenondeuce</p>
+                    <a href="https://github.com/lenondeuce" target="_blank" class="jit-btn jit-btn-github">View Profile</a>
                 </div>
             </div>
         </div>
         
-        <!-- Getting Started -->
+        <!-- Contact Form Section -->
         <div class="jit-section">
-            <h2>🚀 Quick Start</h2>
+            <h2>📩 Send Me a Message</h2>
+            <p style="margin-bottom: 2rem; color: var(--jit-dark);">Have questions about JIT Framework? Want to collaborate? Feel free to reach out!</p>
             
-            <div style="background: var(--jit-light); padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
-                <h3 style="color: var(--jit-primary);">1. Clone the Repository</h3>
-                <div style="background: var(--jit-dark); color: var(--jit-white); padding: 1rem; border-radius: 8px; margin: 1rem 0; font-family: monospace;">
-                    git clone https://github.com/jit-framework/jit-framework.git
+            <form action="mailto:deuce@lenon.dev" method="post" enctype="text/plain">
+                <div class="jit-form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
                 </div>
-            </div>
-            
-            <div style="background: var(--jit-light); padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
-                <h3 style="color: var(--jit-primary);">2. Install Dependencies</h3>
-                <div style="background: var(--jit-dark); color: var(--jit-white); padding: 1rem; border-radius: 8px; margin: 1rem 0; font-family: monospace;">
-                    npm install
+                
+                <div class="jit-form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your email">
                 </div>
-            </div>
-            
-            <div style="background: var(--jit-light); padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
-                <h3 style="color: var(--jit-primary);">3. Start Building</h3>
-                <p>Check out the <a href="/html/docs.html" style="color: var(--jit-primary);">Documentation</a> to learn how to create your first task sheet.</p>
-            </div>
+                
+                <div class="jit-form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="How can I help you?"></textarea>
+                </div>
+                
+                <button type="submit" class="jit-btn jit-btn-primary" style="width: 100%; min-height: 48px;">📩 Send Message</button>
+            </form>
         </div>
         
-        <!-- Contact Section -->
+        <!-- Alternative Contact Methods -->
         <div class="jit-section">
-            <h2>💬 Get in Touch</h2>
-            
-            <div class="jit-benefits-grid">
-                <div class="jit-benefit">
-                    <h3>GitHub Issues</h3>
-                    <p>Report bugs and request features</p>
+            <h2>📧 Alternative Contact Methods</h2>
+            <div class="jit-social-grid">
+                <div class="jit-social-card" style="border-color: var(--jit-secondary);">
+                    <span class="jit-social-icon">📧</span>
+                    <h3>Email</h3>
+                    <p class="jit-username">deuce@lenon.dev</p>
+                    <a href="mailto:deuce@lenon.dev" class="jit-btn jit-btn-primary">Send Email</a>
                 </div>
-                <div class="jit-benefit">
-                    <h3>Discussions</h3>
-                    <p>Ask questions and share ideas</p>
-                </div>
-                <div class="jit-benefit">
-                    <h3>Contributing</h3>
-                    <p>Learn how to contribute code</p>
+                
+                <div class="jit-social-card" style="border-color: var(--jit-success);">
+                    <span class="jit-social-icon">💬</span>
+                    <h3>Telegram</h3>
+                    <p class="jit-username">@deucelenon</p>
+                    <a href="https://t.me/deucelenon" target="_blank" class="jit-btn jit-btn-primary">Message Me</a>
                 </div>
             </div>
         </div>
     </main>
     
     <!-- Footer -->
-    <footer class="jit-footer">
+    <footer style="background: var(--jit-dark); color: var(--jit-white); padding: 2rem; text-align: center; margin-top: 3rem;">
         <p>© 2026 JIT Framework. All rights reserved.</p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
-            Made with ⚡ for AI Agent Automation
+            Made with ⚡ by <a href="https://instagram.com/deucelenon" style="color: var(--jit-white); text-decoration: underline;">Deuce Lenon</a>
         </p>
     </footer>
 </body>
