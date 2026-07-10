@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIT Framework | Get Started</title>
+    <meta name="description" content="Get JIT Framework on GitHub - Star, Fork, Contribute">
+    
+    <style>
+        /* 🌈 JIT Framework Brand Colors */
+        :root {
+            --jit-primary: #667eea;
+            --jit-primary-dark: #764ba2;
+            --jit-secondary: #4299e1;
+            --jit-success: #48bb78;
+            --jit-github: #24292e;
+            --jit-light: #f7fafc;
+            --jit-dark: #2d3748;
+            --jit-white: #ffffff;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--jit-dark);
+            background: #f8f9fa;
+        }
+        
+        /* 🎯 Navigation */
+        .jit-nav {
+            background: var(--jit-primary);
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        
+        .jit-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .jit-nav a {
+            color: var(--jit-white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .jit-nav a:hover { opacity: 0.9; }
+        
+        /* 📝 Main Content */
+        .jit-content {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .jit-section {
+            background: var(--jit-white);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .jit-section h2 {
+            color: var(--jit-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--jit-primary);
+        }
+        
+        /* GitHub Card */
+        .jit-github-card {
+            background: var(--jit-github);
+            color: var(--jit-white);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .jit-github-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .jit-github-logo {
+            font-size: 3rem;
+        }
+        
+        .jit-github-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .jit-github-stats {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .jit-stat {
+            text-align: center;
+        }
+        
+        .jit-stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--jit-primary);
+        }
+        
+        .jit-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* 🔄 Action Buttons */
+        .jit-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        
+        .jit-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .jit-btn:hover { transform: translateY(-2px); }
+        
+        .jit-btn-primary {
+            background: var(--jit-primary);
+            color: var(--jit-white);
+        }
+        
+        .jit-btn-secondary {
+            background: var(--jit-white);
+            color: var(--jit-github);
+            border: 2px solid var(--jit-github);
+        }
+        
+        .jit-btn-github {
+            background: var(--jit-github);
+            color: var(--jit-white);
+        }
+        
+        /* ✨ Benefits */
+        .jit-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .jit-benefit {
+            background: var(--jit-light);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--jit-primary);
+        }
+        
+        .jit-benefit h3 {
+            color: var(--jit-primary-dark);
+            margin-bottom: 0.75rem;
+        }
+        
+        /* 📺 Video Section */
+        .jit-video-container {
+            background: var(--jit-github);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .jit-video-placeholder {
+            background: linear-gradient(135deg, #1a1e22 0%, #24292e 100%);
+            border-radius: 12px;
+            padding: 4rem 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        /* 📱 Mobile Responsive */
+        @media (max-width: 640px) {
+            .jit-nav ul { gap: 1rem; }
+            .jit-github-stats { gap: 2rem; }
+            .jit-actions { flex-direction: column; }
+            .jit-btn { width: 100%; justify-content: center; }
+        }
+        
+        /* Back Link */
+        .jit-back-link {
+            display: inline-block;
+            margin: 2rem;
+            color: var(--jit-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .jit-back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="jit-nav">
+        <ul>
+            <li><a href="jit-framework-home.html">🏠 Home</a></li>
+            <li><a href="jit-framework-features.html">⚡ Features</a></li>
+            <li><a href="jit-framework-docs.html">📚 Documentation</a></li>
+            <li><a href="jit-framework-contact.html">📦 GitHub</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Back Link -->
+    <a href="jit-framework-home.html" class="jit-back-link">→ Back to Home</a>
+    
+    <!-- Main Content -->
+    <main class="jit-content">
+        <div class="jit-section">
+            <h2>📦 Get JIT Framework</h2>
+            <p>Start building better AI workflows today. JIT Framework is open source and available on GitHub.</p>
+        </div>
+        
+        <!-- GitHub Card -->
+        <div class="jit-github-card">
+            <div class="jit-github-header">
+                <div class="jit-github-logo">⚡</div>
+                <div class="jit-github-title">jit-framework/jit-framework</div>
+            </div>
+            <p>Just-In-Time Task Orchestration Framework for AI Agents</p>
+            
+            <div class="jit-github-stats">
+                <div class="jit-stat">
+                    <div class="jit-stat-number">⭐ 2.4k</div>
+                    <div class="jit-stat-label">Stars</div>
+                </div>
+                <div class="jit-stat">
+                    <div class="jit-stat-number"> 🍴 320</div>
+                    <div class="jit-stat-label">Forks</div>
+                </div>
+                <div class="jit-stat">
+                    <div class="jit-stat-number">🔌 158</div>
+                    <div class="jit-stat-label">Open Issues</div>
+                </div>
+                <div class="jit-stat">
+                    <div class="jit-stat-number">✅ 98%</div>
+                    <div class="jit-stat-label">Closed Issues</div>
+                </div>
+            </div>
+            
+            <div class="jit-actions">
+                <a href="https://github.com/jit-framework/jit-framework" class="jit-btn jit-btn-github">
+                    <span>⭐ Star on GitHub</span>
+                </a>
+                <a href="https://github.com/jit-framework/jit-framework/fork" class="jit-btn jit-btn-secondary">
+                    <span>🍴 Fork Repository</span>
+                </a>
+                <a href="https://github.com/jit-framework/jit-framework/issues" class="jit-btn jit-btn-primary">
+                    <span>🐛 Report Issue</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Benefits Section -->
+        <div class="jit-section">
+            <h2>✨ Why Contribute?</h2>
+            <p>Join our growing community of AI developers and help shape the future of agent orchestration.</p>
+            
+            <div class="jit-benefits-grid">
+                <div class="jit-benefit">
+                    <h3>🎯 Learn & Grow</h3>
+                    <p>Work with cutting-edge AI technology and improve your development skills</p>
+                </div>
+                <div class="jit-benefit">
+                    <h3>🤝 Community</h3>
+                    <p>Join a supportive community of AI developers and researchers</p>
+                </div>
+                <div class="jit-benefit">
+                    <h3>🚀 Impact</h3>
+                    <p>Help build tools that thousands of developers rely on daily</p>
+                </div>
+                <div class="jit-benefit">
+                    <h3>📚 Open Source</h3>
+                    <p>Complete transparency and collaborative development</p>
+                </div>
+                <div class="jit-benefit">
+                    <h3>📝 Documentation</h3>
+                    <p>Help improvedocs for everyone</p>
+                </div>
+                <div class="jit-benefit">
+                    <h3>✅ Quality</h3>
+                    <p>High standards and comprehensive testing</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Getting Started -->
+        <div class="jit-section">
+            <h2>🚀 Quick Start</h2>
+            
+            <div style="background: var(--jit-light); padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+                <h3 style="color: var(--jit-primary);">1. Clone the Repository</h3>
+                <div style="background: var(--jit-dark); color: var(--jit-white); padding: 1rem; border-radius: 8px; margin: 1rem 0; font-family: monospace;">
+                    git clone https://github.com/jit-framework/jit-framework.git
+                </div>
+            </div>
+            
+            <div style="background: var(--jit-light); padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+                <h3 style="color: var(--jit-primary);">2. Install Dependencies</h3>
+                <div style="background: var(--jit-dark); color: var(--jit-white); padding: 1rem; border-radius: 8px; margin: 1rem 0; font-family: monospace;">
+                    npm install
+                </div>
+            </div>
+            
+            <div style="background: var(--jit-light); padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+                <h3 style="color: var(--jit-primary);">3. Start Building</h3>
+                <p>Check out the <a href="jit-framework-docs.html" style="color: var(--jit-primary);">Documentation</a> to learn how to create your first task sheet.</p>
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="jit-section">
+            <h2>💬 Get in Touch</h2>
+            
+            <div class="jit-benefits-grid">
+                <div class="jit-benefit">
+                    <h3>GitHub Issues</h3>
+                    <p>Report bugs and request features</p>
+                </div>
+                <div class="jit-benefit">
+                    <h3>Discussions</h3>
+                    <p>Ask questions and share ideas</p>
+                </div>
+                <div class="jit-benefit">
+                    <h3>Contributing</h3>
+                    <p>Learn how to contribute code</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="jit-footer">
+        <p>© 2026 JIT Framework. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+            Made with ⚡ for AI Agent Automation
+        </p>
+    </footer>
+</body>
+</html>

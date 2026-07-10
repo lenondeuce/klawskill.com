@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIT Framework | Documentation</title>
+    <meta name="description" content="JIT Framework Documentation - API Reference and Usage Guides">
+    
+    <style>
+        /* 🌈 JIT Framework Brand Colors */
+        :root {
+            --jit-primary: #667eea;
+            --jit-primary-dark: #764ba2;
+            --jit-secondary: #4299e1;
+            --jit-success: #48bb78;
+            --jit-light: #f7fafc;
+            --jit-dark: #2d3748;
+            --jit-white: #ffffff;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--jit-dark);
+            background: #f8f9fa;
+        }
+        
+        /* 🎯 Navigation */
+        .jit-nav {
+            background: var(--jit-primary);
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        
+        .jit-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .jit-nav a {
+            color: var(--jit-white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .jit-nav a:hover { opacity: 0.9; }
+        
+        /* 📚 Doc Layout */
+        .jit-doc-layout {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        /* Sidebar Navigation */
+        .jit-doc-sidebar {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+        }
+        
+        .jit-sidebar-section {
+            background: var(--jit-white);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1rem;
+        }
+        
+        .jit-sidebar-section h3 {
+            color: var(--jit-primary);
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .jit-sidebar-section ul {
+            list-style: none;
+        }
+        
+        .jit-sidebar-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .jit-sidebar-section a {
+            color: var(--jit-dark);
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        
+        .jit-sidebar-section a:hover {
+            background: var(--jit-light);
+            color: var(--jit-primary);
+        }
+        
+        .jit-sidebar-section a.active {
+            background: var(--jit-primary);
+            color: var(--jit-white);
+        }
+        
+        /* Main Content */
+        .jit-doc-content {
+            background: var(--jit-white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .jit-doc-content h1 {
+            color: var(--jit-primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .jit-doc-content h2 {
+            color: var(--jit-primary-dark);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-top: 1rem;
+            border-top: 2px solid var(--jit-primary);
+        }
+        
+        .jit-doc-content h3 {
+            color: var(--jit-secondary);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 0.75rem 0;
+        }
+        
+        .jit-doc-content p {
+            color: var(--jit-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .jit-doc-content ul, .jit-doc-content ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .jit-doc-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Code Blocks */
+        .jit-code-block {
+            background: var(--jit-dark);
+            color: var(--jit-light);
+            padding: 1.25rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9rem;
+        }
+        
+        .jit-code-block code {
+            display: block;
+            white-space: pre;
+        }
+        
+        /* Back Button */
+        .jit-back-link {
+            display: inline-block;
+            margin: 2rem;
+            color: var(--jit-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .jit-back-link:hover { text-decoration: underline; }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .jit-nav ul { gap: 1rem; }
+            .jit-doc-layout {
+                grid-template-columns: 1fr;
+                margin: 1rem auto;
+            }
+            .jit-doc-sidebar {
+                position: static;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="jit-nav">
+        <ul>
+            <li><a href="jit-framework-home.html">🏠 Home</a></li>
+            <li><a href="jit-framework-features.html">⚡ Features</a></li>
+            <li><a href="jit-framework-docs.html">📚 Documentation</a></li>
+            <li><a href="jit-framework-contact.html">📦 GitHub</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Back Link -->
+    <a href="jit-framework-home.html" class="jit-back-link">← Back to Home</a>
+    
+    <!-- Documentation Layout -->
+    <div class="jit-doc-layout">
+        <!-- Sidebar -->
+        <aside class="jit-doc-sidebar">
+            <div class="jit-sidebar-section">
+                <h3>📖 Getting Started</h3>
+                <ul>
+                    <li><a href="#" class="active">Overview</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#quickstart">Quick Start</a></li>
+                </ul>
+            </div>
+            
+            <div class="jit-sidebar-section">
+                <h3>⚡ Core Concepts</h3>
+                <ul>
+                    <li><a href="#validation-sheets">Validation Sheets</a></li>
+                    <li><a href="#guardrails">Guardrail Systems</a></li>
+                    <li><a href="#episodic-reasoning">Episodic Reasoning</a></li>
+                </ul>
+            </div>
+            
+            <div class="jit-sidebar-section">
+                <h3>🛠️ Advanced Topics</h3>
+                <ul>
+                    <li><a href="#custom-workflows">Custom Workflows</a></li>
+                    <li><a href="#integration">Integration Guide</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="jit-doc-content">
+            <h1>📚 JIT Framework Documentation</h1>
+            <p>Welcome to the official documentation for JIT Framework. This comprehensive guide will help you master Just-In-Time Task Orchestration for AI Agents.</p>
+            
+            <h2 id="overview">Overview</h2>
+            <p>JIT Framework provides a systematic approach to AI agent task orchestration with built-in quality assurance and continuous learning capabilities.</p>
+            
+            <h2 id="installation">Installation</h2>
+            <p>To get started with JIT Framework, you need to install the package and configure your agent workspace.</p>
+            
+            <h3>Prerequisites</h3>
+            <ul>
+                <li>Node.js 16+</li>
+                <li>NPM or Yarn</li>
+                <li>OpenClaw gateway running</li>
+            </ul>
+            
+            <div class="jit-code-block">
+                <code>$ npm install -g jit-framework</code>
+            </div>
+            
+            <h2 id="quickstart">Quick Start Guide</h2>
+            <p>Follow these steps to create your first JIT task sequence:</p>
+            
+            <ol>
+                <li>Create a new task sheet using the JIT template</li>
+                <li>Define your task requirements and validation criteria</li>
+                <li>Set up guardrails to prevent common errors</li>
+                <li>Execute the task with full quality assurance</li>
+            </ol>
+            
+            <h2 id="validation-sheets">Intelligent Validation Sheets</h2>
+            <p>Validation sheets are the core of JIT Framework. They ensure every task is executed with maximum quality and consistency.</p>
+            
+            <h3>Validation Sheet Structure</h3>
+            <p>Each validation sheet contains:</p>
+            <ul>
+                <li>Pre-execution verification checklist</li>
+                <li>Files identified and preserved tables</li>
+                <li>Primary Path execution strategy</li>
+                <li>Episodic reasoning log</li>
+            </ul>
+            
+            <h2 id="guardrails">Guardrail Systems</h2>
+            <p>Guardrails prevent errors before they happen by enforcing quality standards and catching anti-patterns.</p>
+            
+            <h3>Guardrail Categories</h3>
+            <ul>
+                <li><strong>Must-have requirements</strong> - Non-negotiable quality gates</li>
+                <li><strong>Nice-to-have improvements</strong> - Optional enhancements</li>
+                <li><strong>Banned anti-patterns</strong> - Automatic conflict detection</li>
+            </ul>
+            
+            <h2 id="episodic-reasoning">Episodic Reasoning</h2>
+            <p>Learn from every task execution with built-in pattern capture and memory persistence.</p>
+            
+            <h3>Pattern Capture</h3>
+            <p>The episodic reasoning system automatically:</p>
+            <ul>
+                <li>Tracks task execution steps</li>
+                <li>Identifies successful workflows</li>
+                <li>Captures common patterns</li>
+                <li>Builds reusable templates</li>
+            </ul>
+            
+            <h2 id="custom-workflows">Custom Workflows</h2>
+            <p>Create tailored workflows for your specific use cases with JIT's flexible architecture.</p>
+            
+            <h2 id="integration">Integration Guide</h2>
+            <p>Integrate JIT Framework with your existing tools and workflows seamlessly.</p>
+            
+            <h2 id="troubleshooting">Troubleshooting</h2>
+            <p>Common issues and solutions for getting the most out of JIT Framework.</p>
+            
+            <div style="background: var(--jit-light); padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                <h3 style="color: var(--jit-primary);">Need More Help?</h3>
+                <p style="margin-bottom: 1rem;">Check out our GitHub repository for community support and examples:</p>
+                <a href="jit-framework-contact.html" style="color: var(--jit-primary); font-weight: 600;">Visit GitHub Community →</a>
+            </div>
+        </main>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="jit-footer">
+        <p>© 2026 JIT Framework. All rights reserved.</p>
+    </footer>
+</body>
+</html>
