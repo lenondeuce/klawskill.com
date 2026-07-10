@@ -1,0 +1,53 @@
+# JIT Framework - Robots.txt
+# Auto-generated via JIT Framework Orchestrator
+# Date: 2026-07-10
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/internal/
+
+# SiteMap location
+Sitemap: https://jit-framework.com/sitemap.xml
+
+# Crawl delay (seconds)
+Crawl-delay: 2
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 3
+
+# Block AI crawlers (optional - can be enabled later)
+# User-agent: GPTBot
+# Disallow: /
+
+# User-agent: Claude-Web
+# Disallow: /
+
+# JIT Framework specific paths
+Allow: /documentation/
+Allow: /examples/
+Allow: /demo/
+Allow: /api/v1/
+
+# Disallow search parameters
+Disallow: /*?*
+Disallow: /*&*
+
+# Allow JavaScript and CSS for indexing
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.gif$
+Allow: /*.svg$
